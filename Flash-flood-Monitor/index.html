@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="kh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Flash Flood Monitoring</title>
+    <link rel="Icon" href="Image/NPIC.jpg">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Gauge-Chart.js" defer></script>
+    <script src="line-Chart.js" defer></script>
+</head>
+
+<body>
+    <section id="topbar">
+        <div id="title">
+            <br>
+            <h1>ASIAN-MRC TECHNOLOGY COMPETITION</h1>
+            <h2>Flash Flood Monitoring</h2>
+        </div>
+        <div id="Stations">
+            <form action="/action_page.php">
+                <label for="station">Station:</label>
+                <select name="Station" id="station">
+                    <option value="Phnom_Phen_Port">Phnom Phen Port</option>
+                    <option value="Phnom_Phen_Bassac">Phnom Phen(Bassac)</option>
+                    <option value="Prek_Kdam">Prek Kdam</option>
+                    <option value="Kompong_Cham">Kompong Cham</option>
+                    <option value="Stung_Treng">Stung Treng</option>
+                    <option value="Koh_Khel">Koh Khel</option>
+                    <option value="Kratie">Kratie</option>
+                    <option value="Neak_Loung">Neak Loung</option>
+                </select>
+            </form>
+        </div>
+    </section>
+
+    <section id="banner">
+        <div id="Logo">
+            <img src="Image/Asian.png" class="AsianLogo" alt="AsianLogo">
+            <img src="Image/MRC.jpg" class="MRCLogo" alt="MRCLogo">
+            <img src="Image/NPIC.jpg" class="NPICLogo" alt="NPICLogo">
+        </div>
+        <section id="Monitore">
+            <div id="Gaugechart">
+                <div class="Water-LevelGaugechart">
+                    <a>Water Level</a>
+                    <canvas id="Water-Level-Gauge-Chart" width="250" height="250"></canvas>
+                </div>
+                <div id="other-gauges">
+                    <div class="Water-FlowGaugechart">
+                        <a>Water Flow</a>
+                        <canvas id="Water-Flow-Gauge-Chart" width="300" height="300"></canvas>
+                    </div>
+                    <div class="Rain-GaugeGaugechart">
+                        <a>Rain Gauge</a>
+                        <canvas id="Rain-Gauge-Gauge-Chart" width="300" height="300"></canvas>
+                    </div>
+                    <div class="TemperatureGaugechart">
+                        <a>Temperature</a>
+                        <canvas id="Temperature-Gauge-Chart" width="300" height="300"></canvas>
+                    </div>
+                    <div class="HumidityGaugechart">
+                        <a>Humidity</a>
+                        <canvas id="Humidity-Gauge-Chart" width="300" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div id="Linechart">
+                <div class="Water-LevelLinechart">
+                    <a>Water Level</a>
+                    <canvas id="line-Chart-WaterLevel" width="400" height="200"></canvas>
+                </div>
+                <div class="Water-FlowLinechart">
+                    <a>Water Flow</a>
+                    <canvas id="line-Chart-WaterFlow" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>
